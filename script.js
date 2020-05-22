@@ -24,12 +24,8 @@ var i7 = 0
 if(i1 == 1 && i2 == 1 && i3 == 1 && i4 == 1 && i5 == 1 && i6 == 1 && i7==1){
 	p.style.opacity = "0.2"
 }
-
+//Parent 
 p.addEventListener("click", changeBird);
-function changeBird(){
-	p.src = "Images/elmo.gif";
-	var audio = new Audio('sounds/elmo.mp3');
-	audio.play();
 	i2 = 1
 	if(i1 == 1 && i2 == 1 && i3 == 1 && i4 == 1 && i5 == 1 && i6 == 1 && i7==1){
 		p.style.display = "none"
@@ -41,7 +37,28 @@ function changeBird(){
 		w.style.display = "none"
 		k.style.display = "flex"
 	}
+	else{
+		moveleft;
+		moveback; 
+	}
 }
+//Child
+function changeBird(){
+	p.src = "Images/elmo.gif";
+	var audio = new Audio('sounds/elmo.mp3');
+	audio.play();
+}
+//Child
+function moveleft()
+{
+document.getElementById('Images/elmo.gif').style.position="absolute";
+document.getElementById('Images/elmo.gif').style.left="0";
+}
+function moveback()
+{
+document.getElementById('Images/elmo.gif').style.position="absolute";
+}
+
 o.addEventListener("click", changeElmo);
 function changeElmo(){
 	o.src = "Images/bigbird.gif";
